@@ -11,6 +11,7 @@ public class CheckoutPage {
 
     public WebDriver driver;
 
+    //this is a constructor method this comment is just a test in github
     public CheckoutPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
