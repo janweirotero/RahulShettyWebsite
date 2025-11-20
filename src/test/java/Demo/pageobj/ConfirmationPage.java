@@ -23,6 +23,7 @@ public class ConfirmationPage {
 
     public void confirmMessage(){
 
+        //just to check if there is an order
         Assert.assertTrue(getMessage.equalsIgnoreCase("//h1[normalize-space()=\"Thankyou for the order.\"]"));
 
     }
