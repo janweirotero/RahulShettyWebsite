@@ -25,6 +25,7 @@ public class CartPage extends AbstractComponent {
 
     public Boolean getTheText(String nameProd){
 
+        //this will return the text of the element
         return getName.getText().equalsIgnoreCase(nameProd);
 
 
