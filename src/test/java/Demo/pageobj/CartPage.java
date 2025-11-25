@@ -9,6 +9,7 @@ public class CartPage extends AbstractComponent {
 
     public WebDriver driver;
 
+    //this is for cart page
     public CartPage(WebDriver driver) {
         super(driver);
         this.driver = driver;

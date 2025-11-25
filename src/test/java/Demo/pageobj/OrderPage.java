@@ -18,7 +18,6 @@ public class OrderPage extends AbstractComponent {
 
     }
 
-
     public boolean getOrderNames(String prodName){
 
         List<WebElement> rows = driver.findElements(By.cssSelector("tr td:nth-child(3)"));
