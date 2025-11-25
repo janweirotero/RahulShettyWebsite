@@ -13,12 +13,12 @@ public class ProductCatalog extends AbstractComponent {
    public WebDriver driver;
    CartPage cartObj;
 
-
     public ProductCatalog(WebDriver driver){
         super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    
 
     @FindBy(xpath = "(//button[@routerlink=\"/dashboard/cart\"])[1]")
             WebElement clickCart;
