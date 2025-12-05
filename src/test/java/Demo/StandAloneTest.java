@@ -3,10 +3,8 @@ package Demo;
 import Demo.base.BaseTest;
 import Demo.pageobj.*;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 
 
 public class StandAloneTest extends BaseTest{
