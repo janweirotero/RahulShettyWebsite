@@ -42,9 +42,11 @@ public class eCommerce {
                 }
            }*/
 
+        //webelement
         WebElement newProd = getRow.stream().filter(product -> product.findElement(By.cssSelector("b"))
                 .getText().contains(name[1])).findFirst().orElse(null);
 
+        //findelement
         newProd.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 
         WebElement popup = driver.findElement(By.xpath("//div[@id='toast-container']"));
