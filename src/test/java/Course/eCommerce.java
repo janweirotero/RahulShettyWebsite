@@ -27,7 +27,7 @@ public class eCommerce {
         driver.findElement(By.id("userPassword")).sendKeys("Janweir@1234");
         driver.findElement(By.id("login")).click();
 
-        String[] name = {"ZARA","ADIDAS","IPHONE"};
+        String[] name = {"ZARA", "ADIDAS", "IPHONE"};
 
         List<WebElement> getRow = driver.findElements(By.cssSelector(".mb-3"));
 
@@ -42,9 +42,10 @@ public class eCommerce {
                 }
            }*/
 
-      WebElement newProd =  getRow.stream().filter(product -> product.findElement(By.cssSelector("b"))
-              .getText().contains(name[1])).findFirst().orElse(null);
-      newProd.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+        WebElement newProd = getRow.stream().filter(product -> product.findElement(By.cssSelector("b"))
+                .getText().contains(name[1])).findFirst().orElse(null);
+
+        newProd.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 
         WebElement popup = driver.findElement(By.xpath("//div[@id='toast-container']"));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -55,19 +56,14 @@ public class eCommerce {
 
         driver.findElement(By.xpath("(//input[@class=\"input txt text-validated\"])[2]")).sendKeys("ind");
 
-        //List<WebElement> autoSuggest = driver.findElements(By.xpath("//i[@class='fa fa-search']"));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//i[@class='fa fa-search']")));
         driver.findElement(By.xpath("//body//app-root//button[2]")).click();
         driver.findElement(By.xpath("//a[normalize-space()='Place Order']")).click();
 
-       String lastPage = driver.findElement(By.xpath("//h1[normalize-space()='Thankyou for the order.']")).getText();
+        String lastPage = driver.findElement(By.xpath("//h1[normalize-space()='Thankyou for the order.']")).getText();
         Assert.assertTrue(lastPage.equalsIgnoreCase("Thankyou for the order."));
         driver.quit();
-
-
-
-
 
 
     }
